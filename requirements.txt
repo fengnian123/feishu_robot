@@ -1,0 +1,4 @@
+lark-oapi>=1.4.8
+camel-ai[all]==0.2.10
+crawl4ai
+
