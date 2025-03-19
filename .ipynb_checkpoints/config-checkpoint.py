@@ -16,8 +16,13 @@ from camel.agents import ChatAgent
 import asyncio
 from crawl4ai import AsyncWebCrawler, CacheMode
 
+<<<<<<< HEAD
 app_id = "cli_a75d65cbc1fd9013" 
 app_secret = "xWiphBb0k0KUsDt44K6jrg4gHOa02EOF" 
+=======
+app_id = "YOUR_app_id" 
+app_secret = "YOUR_app_secret" 
+>>>>>>> 01711ad55d00a0a0a6b94443a24e48d2d92630e9
 
 qwen_model = ModelFactory.create(
             model_platform=ModelPlatformType.OPENAI_COMPATIBLE_MODEL,

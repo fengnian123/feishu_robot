@@ -19,6 +19,7 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
     else:
         res_content = "解析消息失败，请发送文本消息\nparse message failed, please send text message"
 
+<<<<<<< HEAD
     content_data = {
         "zh_cn": {
             "content": [
@@ -29,6 +30,14 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
         }
     }
     content = json.dumps(content_data)
+=======
+    content = json.dumps(
+        {
+            "text": ""
+            + res_content
+        }
+    )
+>>>>>>> 01711ad55d00a0a0a6b94443a24e48d2d92630e9
 
     if data.event.message.chat_type == "p2p":
         request = (
@@ -37,7 +46,11 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
             .request_body(
                 CreateMessageRequestBody.builder()
                 .receive_id(data.event.message.chat_id)
+<<<<<<< HEAD
                 .msg_type("post")
+=======
+                .msg_type("text")
+>>>>>>> 01711ad55d00a0a0a6b94443a24e48d2d92630e9
                 .content(content)
                 .build()
             )
@@ -59,7 +72,11 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
             .request_body(
                 ReplyMessageRequestBody.builder()
                 .content(content)
+<<<<<<< HEAD
                 .msg_type("post")
+=======
+                .msg_type("text")
+>>>>>>> 01711ad55d00a0a0a6b94443a24e48d2d92630e9
                 .build()
             )
             .build()
